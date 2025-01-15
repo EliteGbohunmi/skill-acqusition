@@ -5,6 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 section {
+  overflow: hidden;
 }
 .container {
   margin-inline: auto;
@@ -58,6 +59,24 @@ img {
   font-weight: 400;
   font-size: 17px;
 }
+ .step .btn{
+  margin-inline: auto;
+  position: relative;
+}
+ .btn button {
+  padding: 10px 50px;
+  border-radius: 7px;
+  background-color: #28a745;
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+  border: 1px solid yellow;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  margin: 20px 0;
+}
 .first_head .btn {
   margin-inline: auto;
 }
@@ -105,7 +124,7 @@ img {
 }
 .about .abt .card > div{
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 /0.5);
-padding: 30px;
+ padding: 30px;
 display: grid;
 gap: 1rem;
 border-radius: 10px;
@@ -119,6 +138,31 @@ border-radius: 10px;
 }
 .skills{
   padding: 6rem 0;
+  position: relative;
+}
+.skills::before{
+  content: '';
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background-color: #ffd700;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(100px);
+  right: 90%;
+  top: 0;
+}
+.skills::after{
+  content: '';
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background-color: #28a745;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(100px);
+  left: 90%;
+  bottom: 0;
 }
 .skills h1{
   text-align: center;
@@ -201,6 +245,7 @@ margin: 20px 0 20px 0;
   color: white;
   transition: all 400ms ease-in-out;
   cursor: pointer;
+  font-size: large;
 }
 .more:hover{
   background-color: rgb(79, 181, 214);
@@ -212,7 +257,6 @@ margin: 20px 0 20px 0;
 }
 .highlights {
 padding: 3em 0;
-background-color:#28a7462a
 }
 .highlights > h1{
   text-align: center;
@@ -220,18 +264,39 @@ background-color:#28a7462a
   font-weight: 500;
 padding-bottom:20px;
 } 
-
+.high{
+  padding:0 20px ;
+}
 .highlights .cardhead{
-  color: #ffd700;
+  color: #28a745;
 }
 .high .cardm{
   display: grid;
-  background-color: rgba(0, 0, 0, 0.712);
-  padding: 20px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+ 
+  
+  padding: 40px 20px;
   gap: 1rem;
   border-radius: 5px;
-  color: white;
+  color: black;
 
+}
+.step{
+  background: rgb(189, 189, 189);
+padding-bottom: 5rem;
+padding-top: 1rem;
+  height: max-content;
+  margin-bottom: 1rem;
+}
+.step h1{
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+footer{
+  background-color: #28a745;
+  text-align: center;
+  font-weight: 300;
 }
 @media (width < 768px) {
   .head,
