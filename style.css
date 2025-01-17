@@ -19,7 +19,7 @@ nav .logo {
   height: 90px;
 }
 .head {
-  padding: 6rem 5px;
+  padding:1.5rem 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
