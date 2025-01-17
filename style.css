@@ -30,19 +30,7 @@ nav .logo {
 .mission_txt {
   line-height: 1.4;
 }
-.head::before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: green;
-  top: 0;
-  left: -30%;
-  z-index: -1;
-  border-radius: 50%;
-  filter: blur(120px);
-  transform: translatey(90px);
-}
+
 img {
   width: 100%;
   height: 100%;
@@ -140,30 +128,7 @@ img {
   padding: 6rem 0;
   position: relative;
 }
-.skills::before {
-  content: "";
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  background-color: #ffd700;
-  z-index: -1;
-  border-radius: 50%;
-  filter: blur(100px);
-  right: 90%;
-  top: 0;
-}
-.skills::after {
-  content: "";
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  background-color: #28a745;
-  z-index: -1;
-  border-radius: 50%;
-  filter: blur(100px);
-  left: 90%;
-  bottom: 0;
-}
+
 .skills h1 {
   text-align: center;
   font-size: 2rem;
