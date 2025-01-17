@@ -275,6 +275,7 @@ p {
   padding: 50px 20px;
   text-align: center;
   border-top: 2px solid #ddd;
+  overflow: hidden;
 }
 
 .cta-container {
@@ -314,6 +315,7 @@ p {
   color: #fff; /* White text */
   padding: 50px 20px;
   font-size: 0.9rem;
+  overflow:hidden;
 }
 
 .footer-container {
