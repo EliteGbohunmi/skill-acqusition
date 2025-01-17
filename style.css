@@ -19,7 +19,7 @@ nav .logo {
   height: 90px;
 }
 .head {
-  padding:2rem 5px;
+  padding: 6rem 5px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
@@ -112,7 +112,7 @@ img {
   gap: 2rem;
 }
 .about .abt .card > div {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 /0.5);
+ box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 30px;
   display: grid;
   gap: 1rem;
@@ -236,8 +236,7 @@ img {
 }
 .high .cardm {
   display: grid;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
-    0 8px 10px -6px rgba(0, 0, 0, 0.5);
+box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   padding: 40px 20px;
   gap: 1rem;
   border-radius: 5px;
@@ -397,4 +396,4 @@ font-size:2.5rem;
   .first_head .btn {
     margin-inline: 0;
   }
-    }
+  }
