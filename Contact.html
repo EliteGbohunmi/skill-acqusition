@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SavvyCross_</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            padding: 0px 20px;
+            
+        }
+
+        .contact-container {
+          position: relative;
+            max-width: 600px;
+            width: 100%;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: 0.3s ease-in-out;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #28a745;
+            outline: none;
+            box-shadow: 0px 0px 8px rgba(40, 167, 69, 0.5);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #28a745;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #218838;
+        }
+        .contact-container::before{
+          content: '';
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          border-radius:50%;
+          top:0;
+          filter: blur(350px);
+          background: gold;
+          z-index: -1;
+        }
+        .contact-container::after{
+          content: '';
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          border-radius:50%;
+          bottom:0;
+          filter: blur(350px);
+          background: green;
+          z-index: -1;
+        }
+h1, p{
+  text-align: center;
+}
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input, textarea {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .btn {
+                font-size: 18px;
+                padding: 14px;
+            }
+        }
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+#countrySearch {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+#countryList {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: white;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+#countryList li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#countryList li:hover {
+    background-color: #f0f0f0;
+}
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+         <h1>CONTACT ME</h1>
+         <br/>
+      <p class="contact-intro">
+        Have a project in mind? I’d love to hear from you. Fill out the form
+      </p>  
+      <br />
+      <br />
+      <form    action="https://formspree.io/f/mjkgoyoz" method="POST">
+    <div class="form-group">
+        <label for="name">1. Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+    </div>
+
+<div class="form-group">
+    <label for="countrySearch">2. Your Country</label>
+    <input type="text" id="countrySearch" placeholder="Search your country..." autocomplete="off">
+    <ul id="countryList"></ul>
+    <input type="hidden" id="selectedCountry" name="country">
+</div>
+
+
+
+
+
+    <div class="form-group">
+        <label for="email">3. Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+        <label for="phone">4. Phone Number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+    </div>
+
+    <div class="form-group">
+        <label for="message">5. Your Message</label>
+        <textarea id="message" name="message" required placeholder="Write your message"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="brand">6. Brand Name & Social Media Handle</label>
+        <input type="text" id="brand" name="brand" required placeholder="Enter your brand name and social media handle">
+    </div>
+
+    <div class="form-group">
+        <label for="source">7. How Did You Hear About My Motion Design Services?</label>
+        <select id="source" name="source" required>
+            <option value="">Select an option</option>
+            <option value="Instagram">Instagram</option>
+            <option value="YouTube">YouTube</option>
+            <option value="X">𝕏 (formerly Twitter)</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn">Send Message</button>
+</form>
+    </div>
+<script>
+  const countries = [
+    "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Argentina", "Armenia", "Australia", "Austria",
+    "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin",
+    "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso",
+    "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad", "Chile",
+    "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic",
+    "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea",
+    "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia",
+    "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti",
+    "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
+    "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan", "Laos", "Latvia",
+    "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar",
+    "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius",
+    "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique",
+    "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger",
+    "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", "Palestine",
+    "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar",
+    "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines",
+    "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles",
+    "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa",
+    "South Korea", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland",
+    "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga",
+    "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine",
+    "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu",
+    "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
+];
+
+const countrySearch = document.getElementById("countrySearch");
+const countryList = document.getElementById("countryList");
+const selectedCountry = document.getElementById("selectedCountry");
+
+// Function to filter countries
+function filterCountries() {
+    let query = countrySearch.value.toLowerCase();
+    countryList.innerHTML = "";
+
+    if (query.length === 0) {
+        countryList.style.display = "none";
+        return;
+    }
+
+    const filtered = countries.filter(country => country.toLowerCase().includes(query));
+    countryList.style.display = filtered.length ? "block" : "none";
+
+    filtered.forEach(country => {
+        let listItem = document.createElement("li");
+        listItem.textContent = country;
+        listItem.onclick = function () {
+            countrySearch.value = country;
+            selectedCountry.value = country;
+            countryList.style.display = "none";
+        };
+        countryList.appendChild(listItem);
+    });
+}
+
+// Event listener for input field
+countrySearch.addEventListener("input", filterCountries);
+
+// Hide dropdown when clicking outside
+document.addEventListener("click", function (event) {
+    if (!countrySearch.contains(event.target) && !countryList.contains(event.target)) {
+        countryList.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>
